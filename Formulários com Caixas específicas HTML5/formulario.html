@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Formulários com Caixas específicas HTML5</title>
+	</head>
+	<body>
+        <h1>Formulário Completo &hearts;</h1>
+        <form action="recebe-formulario.php" method="post">
+			<label for="nome_id">Nome: </label>
+			<input 
+                id="nome_id" 
+                type="text" 
+                name="nome" 
+                placeholder="Digite seu nome aqui" required>
+                
+			<br>
+
+			<label for="email_id">Email: </label>
+			<input 
+				id="email_id" 
+				type="email" 
+				name="email"
+				placeholder="Seu email" required>
+
+			<br>
+
+			<label for="telefone_id">Telefone: </label>
+			<input 
+				id="telefone_id" 
+				type="tel" 
+				name="telefone"
+				placeholder="Seu telefone" required>
+
+			<br>
+
+			<label for="site_id">Site: </label>
+			<input 
+				id="site_id" 
+				type="url" 
+				name="site"
+				placeholder="Seu site" required>
+
+			<br>
+
+			<label for="nascimento_id">Nascimento: </label>
+			<input 
+				id="nascimento_id" 
+				type="date" 
+				name="nascimento" required>
+
+			<br>
+
+            <label for="quantidade_filhos_id">Quantidade de filhos: </label>
+			<input 
+				id="quantidade_filhos_id" 
+				type="number" 
+				name="quuantidade-filhos"
+				min="0" 
+				max="30" required>
+
+			<br>
+
+			<label for="temperatura_id">Temperatura: </label>
+			<input 
+				id="temperatura_id" 
+				type="number" 
+				name="temperatura"
+				min="-10" 
+				max="50"
+				step="0.01" required>
+
+			<br>
+
+            <label for="horario_local_id">Horário local: </label>
+			<input 
+				id="horario_local_id" 
+				type="time" 
+				name="horario_local" required>
+
+			<br>
+
+			<label for="senha_id">Senha: </label>
+			<input 
+				id="senha_id" 
+				type="password" 
+				name="senha"
+				placeholder="Sua senha" required>
+
+            <br>
+
+            <h4>Qual a discilpina você mais gosta?</h4>
+            <label for="lc_id">Lógica Computacional</label>
+            <input 
+                id="lc_id" 
+                type="radio" 
+                value="logica-computacional" 
+                name="disciplina_preferida" required>
+            
+            <br>
+    
+            <label for="dw_id">Desenvolvimento Web</label>
+            <input 
+                id="dw_id" 
+                type="radio" 
+                value="desenvolvimento-web" 
+                name="disciplina_preferida" required>
+				
+
+			<br>
+            <br>
+
+            <label for="cor_id">Cor: </label>
+			<input id="cor_id" name="cor" type="color" required>
+            
+            <br>
+            <br>
+
+			<label for="mensagem_id">Mensagem: </label>
+            <br>
+			<textarea 
+				id="mensagem_id" 
+				name="mensagem"
+                placeholder="Digite sua mensagem"
+				rows="5"
+				cols="50"
+				maxlength="150" required>
+			</textarea>
+
+			<br>
+
+            <label for="nossos_emails_id">Deixe a caixa marcada para receber nossos e-mails</label>
+			<input 
+                id="nossos_emails_id" 
+                type="checkbox" 
+                value="nossos-emails" 
+                name="caixa_marcada" checked>
+
+            <br>
+
+			<label for="emails_parceiros_id">Deseja receber e-mails de parceiros?</label>
+			<input 
+                id="emails_parceiros_id" 
+                type="checkbox" 
+                value="emails-parceiros" 
+                name="receber">
+
+            <br>
+            <br>
+			
+			<input type="submit" value="Enviar">
+		</form>
+	</body>
+</html>
