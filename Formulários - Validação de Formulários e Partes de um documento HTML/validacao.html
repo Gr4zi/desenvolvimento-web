@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <style>
+        .myDiv {
+          border: 5px outset red;
+          background-color: lightblue;
+          text-align: center;
+        }
+        </style>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Formulários - Validação de Formulários e Partes de um documento HTML</title>
+	</head>
+	<body>
+        <form action="recebe-validacao.php" method="post"></form>
+        <h2 id="topo"></h2>
+        <ul>
+            <li>
+                <a href="validacao.html#final">Ir para o final dessa página</a>
+            </li>
+        </ul>
+          
+        <header>
+            <div class="myDiv">
+            <h1>Início da Página de Pesquisa</h1>
+            </div>
+
+            <figure>
+                <center><img src="img/bem-vindo.jpg" alt="bem_vindo"></center>
+            </figure>
+
+
+            <p>Feito por Fernando Avelino &#9996;&#128515;</p>
+
+        </header>
+        <br>
+        <hr>
+
+        <article>
+            <h2>Objetivo da Pesquisa</h2>
+            <p>O objetivo dessa pesquisa foi criar esses questionários de forma ituitiva, para aperfeiçoar minhas habilidades em HTML</p>
+        </article>
+        <br><hr>
+
+        <aside>
+            <p>A familiaridade com o ambiente de desenvolvimento melhora cada vez mais conforme colocamos em prática tudo aquilo que aprendemos.</p>
+        </aside>
+        <br><br>
+        
+        <fieldset>
+            <section>
+            <h4>Faça upload de um arquivo</h4>
+		    <form action="recebe-validacao.php" method="post" enctype="multipart/form-data">
+			<input id="file_id" type="file" name="file">
+            </section>
+        </fieldset>
+        <br><br>
+
+        <fieldset>
+            <section>
+            <h4>Selecione dentre esses estados qual você gostaria de conhecer.</h4>
+            <form action="parametros.php" method="post">
+                <select id="estados_id" name="estados" multiple="multiple">
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="PR">Paraná</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="BA">Bahia</option>
+                </select>
+            
+            <h4>Selecione o estado em que você reside.</h4>
+                <select id="estado_id" name="estado">
+                    <optgroup label="Região Sudeste">
+                        <option value="SP">São Paulo</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                    </optgroup>
+                    <optgroup label="Região Sul">
+                        <option value="PR">Paraná</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="SC">Santa Catarina</option>
+                    </optgroup>
+                    <optgroup label="Região Nordeste">
+                        <option value="AL">Alagoas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="PI">Piauí</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="SE">Sergipe</option>
+                    <optgroup label="Região Centro Oeste">
+                        <option value="GO">Goiás</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="DF">Distrito Federal</option>
+                    <optgroup label="Região Norte">
+                        <option value="AC">Acre</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="PA">Pará</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="TO">Tocantins</option>
+                    </optgroup>
+                </select>
+            </section>
+        </fieldset>
+
+                <br>
+                <br>
+                
+                <fieldset>
+                <section>
+                <h4>Para qual dessas seleções vai a sua torcida na Copa do Mundo?</h4>
+                <input id="copa_id" name="comida" type="text" list="copas_id">
+                
+                <datalist id="copas_id">
+                        <option value="Alemanha">
+                        <option value="Arábia Saudita">
+                        <option value="Argentina ">
+                        <option value="Bélgica ">
+                        <option value="Brasil ">
+                        <option value="Camarões">
+                        <option value="Canadá">
+                        <option value="Catar ">
+                        <option value="Coreia do Sul">
+                        <option value="Croácia">
+                        <option value="Dinamarca">
+                        <option value="Espanha">
+                        <option value="Equador">
+                        <option value="Estados Unidos">
+                        <option value="França">
+                        <option value="Gana">
+                        <option value="Holanda">
+                        <option value="Inglaterra">
+                        <option value="Irã">
+                        <option value="Japão">
+                        <option value="Marrocos">
+                        <option value="México">
+                        <option value="Polônia">
+                        <option value="Portugal">
+                        <option value="Senegal">
+                        <option value="Sérvia">
+                        <option value="Suíça ">
+                        <option value="Tunísia">
+                        <option value="Uruguai">
+                        <option value="Escócia, País de Gales ou Ucrânia">
+                        <option value="Austrália, Emirados Árabes ou Peru">
+                        <option value="Costa Rica ou Nova Zelândia">        
+                </datalist>
+                </section>
+            </fieldset>
+                <br>
+                <br>
+                <br>
+
+            <fieldset>
+                <section>
+                <label for="nome_id">Nome: </label>
+                <input id="nome_id" name="nome" type="text" value="IFSP" readonly>
+    
+                <label for="email_id">Email: </label>
+                <input id="email_id" name="email" type="email" value="Autor@hotmail.com"disabled>
+            </section>
+            </fieldset>
+                <br><br>
+
+            <fieldset>
+                <section>
+                <h4>Digite a Placa do seu carro</h4>
+                <label for="placa_id">Placa: </label>
+                <input
+                    id="placa_id"
+                    name="placa"
+                    type="text"
+                    pattern="[A-Z]{3} [0-9]{4}"
+                    title="As placas são formadas por 3 letras ou 4 números">
+                </section>
+            </fieldset>
+                <br>
+                <br>
+                
+            <fieldset>
+                <section>
+                <h4>Qual seu CEP?</h4>
+                <label for="cep_id">Número CEP: </label>
+                <input
+                    id="cep_id"
+                    name="CEP"
+                    type="text"
+                    pattern="[0-9]{5} [0-9]{3}"
+                    title="Os CEPs são formados por 5 números e mais 3 números">
+                </section>
+            </fieldset>
+                <br>
+                <br>
+
+
+			<button id="b1" type="reset">
+				Botão de reset
+				<img src="http://www.k19.com.br/figs/botao-reset.png" alt="Reiniciar">
+			</button>
+            <br><br>
+
+			<input type="submit" value="Enviar">
+            </button>
+            <br>
+            <br>
+
+            <h2 id="final">Final da página</h2>
+            <ul>
+                <li>
+                    <a href="validacao.html#topo">Ir para o início dessa página</a>
+                </li>
+            </ul>
+            
+            <div class="myDiv">
+            <footer>
+                <center><p>Autor: E-Mail<br></center>
+                <center><a href="mailto:fernandoavelino94@gmail.com">fernandoavelino94@gmail.com</a></p></center>    
+            </footer>
+            </div>
+		</form>
+	</body>
+</html>
